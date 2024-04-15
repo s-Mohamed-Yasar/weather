@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Weather Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("/images/wp3382033-black-cloud-background.png"); /* Use a background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            max-width: 400px;
+            margin: 20px auto;
+            margin-top: 80px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        .search-container {
+            display: flex;
+            margin: 20px;
+        }
+
+        .search-input {
+            padding: 10px;
+            width: 50%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 50px;
+            margin-left: 20%;
+            outline: none;
+        }
+
+        .search-button {
+            background-color: #3498DB;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            margin-top: 50px;
+            cursor: pointer;
+        }
+
+        .search-button:hover {
+            background-color: #2980B9;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        #location {
+            font-size: 24px;
+        }
+
+        #temperature {
+            font-size: 48px;
+        }
+
+        #description {
+            font-size: 20px;
+        }
+
+        footer {
+            margin-top: 160px;
+        }
+    </style>
+</head>
+<body>
+    <form action="/weather" method="POST">
+    <div class="search-container">
+        <input type="text" class="search-input" name="input" placeholder="Search...">
+        <button class="search-button" >Search</button>
+    </div>
+    </form>
+     
+    
+     
+    <div class="container">
+        <h1>Yasar's Weather</h1>
+        <div id="location">city , country </div>
+        <div id="temperature">temp °C</div>
+        <div id="description"> description </div>
+    </div>
+    
+    <footer>
+        &copy; 2024 Yasar's Weather Website
+    </footer>
+
+    
+</body>
+</html>
